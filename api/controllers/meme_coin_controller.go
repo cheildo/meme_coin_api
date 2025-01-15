@@ -19,7 +19,6 @@ func CreateMemeCoin(c *gin.Context) {
 	validate := validator.New()
 	err := validate.Struct(coin)
 	if err != nil {
-		// Extract validation errors
 		validationErrors := err.(validator.ValidationErrors)
 		errorsMap := make(map[string]string)
 		for _, fieldErr := range validationErrors {
