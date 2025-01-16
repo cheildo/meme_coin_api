@@ -17,7 +17,6 @@ MemeCoin API is a RESTful service for managing meme coins. The application provi
 
 ## Project Structure
 
-```
 MemeCoin_api/
 ├── api/
 │   ├── controllers/                    # Handlers for API endpoints
@@ -107,13 +106,11 @@ docker compose up --build
 ## Configuration
 
 ### **Environment Variables**
-| Variable      | Description                           | Default Value              |
-|---------------|---------------------------------------|----------------------------|
-| `MONGO_DOCKER`| Docker MongoDB connection string.     | `mongodb://mongo:27017`    |
-| `MONGO_LOCAL` | Local MongoDB connection string.      | `mongodb://localhost:27017`|
-| `MONGO_ENV`   | Chosen environment.                   | `mongodb://mongo:27017`    |
+| Variable      | Description                           |   Docker value             | Local value                |
+|---------------|---------------------------------------|----------------------------|----------------------------|
+| `MONGO_URI`   | Docker MongoDB connection string.     | `mongodb://mongo:27017`    | `mongodb://localhost:27017`|
 
-You can define these variables in a `.env` file or directly in `docker-compose.yml`.
+You can define this variable in a `.env` file or directly in `docker-compose.yml`.
 
 ---
 
